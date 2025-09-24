@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finn.tech | Planejamento Financeiro Inteligente e Acessível</title>
+    <meta name="description" content="Assuma o controle do seu dinheiro com o Finn.tech. Registre gastos, crie metas e visualize o futuro das suas finanças de forma simples e acessível.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+
+    <style>
+        /* Estilo base com a fonte Inter */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8FAFC; /* slate-50 */
+            color: #1E293B; /* slate-800 */
+        }
+        /* Foco visível para acessibilidade em todos os elementos interativos */
+        :focus-visible {
+            outline: 3px solid #4ADE80; /* green-400 */
+            outline-offset: 2px;
+            border-radius: 4px;
+        }
+        /* Suaviza a rolagem da página */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Cabeçalho -->
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo e Nome do App -->
+            <a href="#" class="flex items-center gap-3" aria-label="Página inicial do Finn.tech">
+                <!-- ALTERAÇÃO AQUI: Tamanho da logo aumentado -->
+                <img src="assets/logo.png" alt="Logo do Finn.tech: um cofre de porco estilizado" class="w-12 h-12">
+                <span class="text-2xl font-bold text-green-800">finn.tech</span>
+            </a>
+            <!-- Links de Navegação para Desktop -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#funcionalidades" class="text-slate-600 hover:text-green-700 transition-colors">Funcionalidades</a>
+                <a href="#acessibilidade" class="text-slate-600 hover:text-green-700 transition-colors">Acessibilidade</a>
+                <a href="#" class="text-slate-600 hover:text-green-700 transition-colors">Preços</a>
+                <a href="#cta" class="bg-green-600 text-white font-medium py-2 px-5 rounded-lg hover:bg-green-700 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2">Começar agora</a>
+            </div>
+            <!-- Botão do Menu Mobile -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-slate-700 hover:text-green-700 focus:outline-none" aria-label="Abrir menu de navegação">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Menu Mobile (oculto por padrão) -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#funcionalidades" class="block text-slate-600 hover:text-green-700 transition-colors py-2">Funcionalidades</a>
+            <a href="#acessibilidade" class="block text-slate-600 hover:text-green-700 transition-colors py-2">Acessibilidade</a>
+            <a href="#" class="block text-slate-600 hover:text-green-700 transition-colors py-2">Preços</a>
+            <a href="#cta" class="block w-full text-center bg-green-600 text-white font-medium py-3 px-5 rounded-lg hover:bg-green-700 transition-colors mt-2">Começar agora</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+        <!-- Seção Hero -->
+        <section class="py-20 md:py-32 bg-white">
+            <!-- ALTERAÇÃO: A seção agora usa um grid para alinhar texto e imagem lado a lado em telas maiores -->
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <!-- Coluna de Texto -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight">
+                        O futuro do seu dinheiro, 
+                        <span class="text-green-700">agora sob seu controle</span>.
+                    </h1>
+                    <p class="mt-6 max-w-2xl mx-auto md:mx-0 text-lg text-slate-600">
+                        Planejamento financeiro inteligente e acessível para todos. O Finn.tech te ajuda a entender seus gastos, criar metas e construir um futuro financeiro sólido.
+                    </p>
+                    <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start items-center gap-4">
+                        <a href="#cta" class="w-full sm:w-auto bg-green-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-green-700 transition-transform hover:scale-105 shadow-lg">Criar conta grátis</a>
+                        <a href="#funcionalidades" class="w-full sm:w-auto text-green-700 font-semibold py-3 px-8 rounded-lg hover:bg-green-50 transition-colors">Ver funcionalidades</a>
+                    </div>
+                </div>
+                <!-- Coluna da Imagem -->
+                <div class="mt-12 md:mt-0">
+                    <!-- ALTERAÇÃO: Tamanho da imagem do dashboard reduzido e removido espaçamento extra -->
+                    <img src="assets/dashboard.png" alt="Interface do aplicativo Finn.tech mostrando um dashboard financeiro com gráficos e metas." class="mx-auto rounded-xl shadow-2xl w-full max-w-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Funcionalidades -->
+        <section id="funcionalidades" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Tudo que você precisa em um só lugar</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">Desde o registro de um café até a projeção da sua aposentadoria.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Card de Funcionalidade 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Registro Simplificado</h3>
+                        <p class="mt-2 text-slate-600">Cadastre suas rendas e despesas (fixas ou pontuais) em segundos. Nossa interface intuitiva torna o processo rápido e fácil.</p>
+                    </div>
+                    <!-- Card de Funcionalidade 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Organização Inteligente</h3>
+                        <p class="mt-2 text-slate-600">Classifique seus gastos e monte planos de orçamento. Visualize para onde seu dinheiro está indo com gráficos claros e objetivos.</p>
+                    </div>
+                    <!-- Card de Funcionalidade 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Crie e Acompanhe Metas</h3>
+                        <p class="mt-2 text-slate-600">Seja uma viagem, um carro novo ou a sua reserva de emergência. Crie metas financeiras e veja seu progresso em tempo real.</p>
+                    </div>
+                    <!-- Card de Funcionalidade 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Sugestões Personalizadas</h3>
+                        <p class="mt-2 text-slate-600">Com base nos seus hábitos, o Finn.tech sugere divisões de gastos e estratégias para você atingir seus objetivos mais rápido.</p>
+                    </div>
+                    <!-- Card de Funcionalidade 5 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Resumos e Projeções</h3>
+                        <p class="mt-2 text-slate-600">Receba um sumário completo do seu mês e entenda o impacto dos seus hábitos com projeções para os próximos meses.</p>
+                    </div>
+                    <!-- Card de Funcionalidade 6 -->
+                    <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow">
+                        <h3 class="text-xl font-bold text-green-800">Visão Clara por Categoria</h3>
+                        <p class="mt-2 text-slate-600">Saiba exatamente quanto gastou com alimentação, transporte ou lazer. O controle total na palma da sua mão.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Acessibilidade -->
+        <section id="acessibilidade" class="py-20 bg-white">
+            <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Finanças para <span class="text-green-700">todas as pessoas</span>.</h2>
+                    <p class="mt-4 text-lg text-slate-600">Acreditamos que o planejamento financeiro deve ser acessível a todos, sem exceção. Por isso, construímos o Finn.tech com os mais altos padrões de acessibilidade.</p>
+                    <ul class="mt-6 space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <p class="text-slate-600"><strong class="font-semibold text-slate-800">Padrões WCAG 2.1:</strong> Seguimos as diretrizes de acessibilidade para conteúdo web, garantindo alto contraste de cores e navegação clara.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <p class="text-slate-600"><strong class="font-semibold text-slate-800">Navegação por Teclado:</strong> Use o Finn.tech completamente sem a necessidade de um mouse.</p>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-green-600 font-bold">✓</span>
+                            <p class="text-slate-600"><strong class="font-semibold text-slate-800">Compatibilidade com Leitores de Tela:</strong> Estrutura semântica e atributos ARIA para uma experiência perfeita com tecnologias assistivas.</p>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="order-1 md:order-2">
+                    <!-- ALTERAÇÃO AQUI: Tamanho da imagem de acessibilidade ajustado para corresponder ao do dashboard -->
+                    <img src="assets/acessibility.png" alt="Uma ilustração abstrata representando diversidade e inclusão, com ícones de acessibilidade como teclado e leitor de tela." class="rounded-lg shadow-lg w-full mx-auto max-w-xl">
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Chamada para Ação (CTA) Final -->
+        <section id="cta" class="py-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Pronto para transformar sua vida financeira?</h2>
+                <p class="mt-4 max-w-xl mx-auto text-lg text-slate-600">Comece gratuitamente e descubra como o Finn.tech pode te ajudar a alcançar a tranquilidade financeira.</p>
+                <div class="mt-8">
+                    <a href="#" class="inline-block bg-green-600 text-white font-semibold py-4 px-10 rounded-lg hover:bg-green-700 transition-transform hover:scale-105 shadow-xl text-lg">Começar agora, é grátis!</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Coluna Logo e Descrição -->
+                <div class="col-span-1 md:col-span-2">
+                    <a href="#" class="flex items-center gap-3" aria-label="Página inicial do Finn.tech">
+                         <!-- ALTERAÇÃO AQUI: Tamanho da logo aumentado -->
+                         <img src="assets/logo.png" alt="Logo do Finn.tech" class="w-10 h-10">
+                        <span class="text-xl font-bold text-white">finn.tech</span>
+                    </a>
+                    <p class="mt-4 max-w-xs text-slate-400">Planejamento financeiro inteligente para um futuro tranquilo.</p>
+                </div>
+                <!-- Coluna Produto -->
+                <div>
+                    <h4 class="font-semibold text-white">Produto</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#funcionalidades" class="hover:text-green-400 transition-colors">Funcionalidades</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Preços</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Segurança</a></li>
+                    </ul>
+                </div>
+                <!-- Coluna Empresa -->
+                <div>
+                    <h4 class="font-semibold text-white">Empresa</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Sobre nós</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-green-400 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-slate-700 pt-8 text-center text-slate-400 text-sm">
+                <p>&copy; 2025 Finn.tech. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para o menu mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            // Acessibilidade: muda o aria-label para indicar o estado do menu
+            const isHidden = mobileMenu.classList.contains('hidden');
+            mobileMenuButton.setAttribute('aria-label', isHidden ? 'Abrir menu de navegação' : 'Fechar menu de navegação');
+        });
+
+        // Opcional: fechar menu ao clicar em um link (útil em Single Page Applications)
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuButton.setAttribute('aria-label', 'Abrir menu de navegação');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
